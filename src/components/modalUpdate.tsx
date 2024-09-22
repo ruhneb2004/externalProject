@@ -65,7 +65,7 @@ export default function ModalUpdatingUser({
         </svg>
         <span>{alertMessage}</span>
       </div>
-      <div className="modal-box max-w-none w-1/2 min-w-[400px] py-9 px-20">
+      <div className="modal-box  md:w-[700px] xl:w-1/2 max-w-[1000px] min-w-[400px] py-9 px-10 lg:px-20">
         <form method="dialog">
           <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
             ✕
@@ -76,8 +76,8 @@ export default function ModalUpdatingUser({
           <div className="text-2xl font-medium">Update Details</div>
         </div>
         <div className="flex pt-8 w-full items-center flex-col gap-10">
-          <div className="flex w-full justify-between gap-10">
-            <div className="min-w-[150px] flex items-center text-lg font-semibold">
+          <div className="flex flex-col sm:flex-row w-full justify-between gap-3 sm:gap-10">
+            <div className="min-w-[150px] flex  items-center text-lg font-medium sm:font-semibold">
               Creator Name
             </div>
             <div className="w-full">
@@ -92,8 +92,8 @@ export default function ModalUpdatingUser({
               />
             </div>
           </div>
-          <div className="flex w-full justify-between gap-10">
-            <div className="min-w-[150px]  flex items-center text-lg font-semibold">
+          <div className="flex flex-col sm:flex-row w-full justify-between gap-3 sm:gap-10">
+            <div className="min-w-[150px] flex flfex items-center text-lg font-medium sm:font-semibold">
               Email
             </div>
             <div className="w-full">
@@ -131,8 +131,8 @@ export default function ModalUpdatingUser({
               </label>
             </div>
           </div>
-          <div className="flex w-full justify-between gap-10">
-            <div className="min-w-[150px]  flex items-center text-lg font-semibold">
+          <div className="flex flex-col sm:flex-row w-full justify-between gap-3 sm:gap-10">
+            <div className="min-w-[150px] flex flfex items-center text-lg font-medium sm:font-semibold">
               Gender
             </div>
             <div className="w-full">
@@ -149,7 +149,7 @@ export default function ModalUpdatingUser({
               </select>
             </div>
           </div>
-          <div className="flex w-full gap-10">
+          <div className="flex w-full sm:gap-10 justify-between sm:justify-normal">
             <div className="min-w-[150px]  flex items-center text-lg font-semibold">
               Available for chat
             </div>

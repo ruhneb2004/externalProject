@@ -10,7 +10,7 @@ export default function App() {
     <div>
       <Routes>
         <Route
-          path="/"
+          path="/externalProject"
           element={
             <React.Suspense
               fallback={

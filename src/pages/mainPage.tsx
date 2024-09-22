@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Button from "../components/buttonComponent";
-import { TopMainSvgLarge } from "../images/topMainLarge";
+import { TopMainSvgLarge } from "../../public/images/topMainLarge";
 import axios from "axios";
 import PersonalComp from "../components/personalComp";
 import Footer from "../components/footer";
@@ -53,13 +53,14 @@ export default function MainPage() {
         </div>
 
         <div className="flex justify-center ml-14 gap-5">
-          <TopMainSvgLarge className="w-full h-full" />
+          <TopMainSvgLarge className="w-full h-full -mt-20" />
         </div>
         {/* Smiling Lady Below */}
         <div className=" bg-white flex lg:flex-row w-4/5 flex-col ">
           <div className="flex-1">
             <div className="flex gap-8 flex-col">
               <div className="text-[40px] xs:text-[45px] sm:text-[50px] xl:text-[55px] font-semibold leading-[60px] text-start">
+                <img src="images/smiling.svg" alt="" className="mb-7" />
                 Express yourself{" "}
                 <span>
                   <br />
@@ -85,18 +86,18 @@ export default function MainPage() {
           <div className="flex-1 flex justify-center">
             <span className="hidden sm:block">
               <AsyncImage
-                src="../src/images/lady.svg"
+                src="images/lady.svg"
                 style={{ width: 560, height: 440 }}
-                loader={<div className="bg-slate-400 rounded-3xl"></div>}
+                loader={<div className="skeleton"></div>}
                 error={<div style={{ background: "#eee" }} />}
                 loading="lazy"
               />
             </span>
             <span className="sm:hidden">
               <AsyncImage
-                src="../src/images/lady.svg"
+                src="images/lady.svg"
                 style={{ width: 400, height: 300 }}
-                loader={<div className="bg-slate-400 rounded-3xl"></div>}
+                loader={<div className="skeleton"></div>}
                 error={<div style={{ background: "#eee" }} />}
                 loading="lazy"
               />
@@ -107,9 +108,9 @@ export default function MainPage() {
         <div className=" bg-white flex lg:flex-row flex-col-reverse w-4/5 gap-5 justify-center ">
           <div className="flex-1 flex justify-center">
             <AsyncImage
-              src="../src/images/phoneMain.svg"
+              src="images/phoneMain.svg"
               style={{ width: 260, height: 500 }}
-              loader={<div className="bg-slate-400 rounded-3xl"></div>}
+              loader={<div className="rounded-3xl skeleton"></div>}
               error={<div style={{ background: "#eee" }} />}
               loading="lazy"
             />
@@ -117,6 +118,7 @@ export default function MainPage() {
           <div className="flex-1">
             <div className="flex gap-8 flex-col">
               <div className="text-[40px] xs:text-[45px] sm:text-[50px] xl:text-[55px] font-semibold leading-[70px] text-start ">
+                <img src="images/radioIcon.svg" alt="" className="mb-7" />
                 Create and{" "}
                 <span>
                   <br />
@@ -145,6 +147,7 @@ export default function MainPage() {
           <div className="flex-1">
             <div className="flex gap-8 flex-col">
               <div className="text-[40px] xs:text-[45px] sm:text-[50px] xl:text-[55px] font-semibold leading-[70px] text-start ">
+                <img src="images/location.svg" alt="" className="mb-7" />
                 Share live{" "}
                 <span>
                   <br />
@@ -170,18 +173,18 @@ export default function MainPage() {
           <div className="flex-1 w-full overflow-hidden">
             <span className="hidden sm:block">
               <AsyncImage
-                src="../src/images/manHoldingPhone.svg"
+                src="images/manHoldingPhone.jpg"
                 style={{ width: 540, height: 490 }}
-                loader={<div className="bg-slate-400 rounded-3xl"></div>}
+                loader={<div className="skeleton "></div>}
                 error={<div style={{ background: "#eee" }} />}
                 loading="lazy"
               />
             </span>
             <span className="sm:hidden">
               <AsyncImage
-                src="../src/images/manHoldingPhone.svg"
+                src="images/manHoldingPhone.svg"
                 style={{ width: 320, height: 300 }}
-                loader={<div className="bg-slate-400 rounded-3xl"></div>}
+                loader={<div className="skeleton"></div>}
                 error={<div style={{ background: "#eee" }} />}
                 loading="lazy"
               />

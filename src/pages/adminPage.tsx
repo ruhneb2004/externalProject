@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import Button from "../components/buttonComponent";
-import { AnalyticsIcon } from "../images/analytics";
-import { TrashCan } from "../images/Vector";
+import { AnalyticsIcon } from "../../public/images/analytics";
+import { TrashCan } from "../../public/images/Vector";
 import { Person } from "./mainPage";
 import axios from "axios";
-import { DownArrow } from "../images/downArrow";
+
 import ModalChart from "@/components/modalChart";
 import ModalAddingMember from "@/components/modalAdding";
 import ModalUpdatingUser from "@/components/modalUpdate";
@@ -236,16 +236,32 @@ export default function AdminPage() {
         </div>
         <div className="flex justify-center">
           <button
-            className={`flex gap-1 font-semibold bg-slate-200 pl-6 pr-4 py-3 rounded-full hover:bg-slate-300 active:shadow-inner active:shadow-slate-600 transition-all `}
+            className={`flex gap-1 font-semibold bg-slate-200 pl-6 pr-4 py-3 rounded-full hover:bg-slate-300 active:shadow-inner active:shadow-slate-600 transition-all w-fit`}
           >
             <div
               onClick={() => {
                 setPageNumber(pageNumber + 1);
               }}
+              className="w-fit"
             >
               Load more
             </div>{" "}
-            <DownArrow />
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </div>
           </button>
         </div>
       </div>

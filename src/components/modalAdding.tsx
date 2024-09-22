@@ -58,7 +58,7 @@ export default function ModalAddingMember() {
         </div>
         <div className="flex pt-8 w-full items-center flex-col gap-10">
           <div className="flex flex-col sm:flex-row w-full justify-between gap-3 sm:gap-10">
-            <div className="min-w-[150px] flex flfex items-center text-lg font-medium sm:font-semibold">
+            <div className="min-w-[150px] flex  items-center text-lg font-medium sm:font-semibold">
               Creator Name
             </div>
             <div className="w-full">

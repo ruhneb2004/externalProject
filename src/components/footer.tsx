@@ -1,9 +1,9 @@
-import { Logo } from "../images/Logo";
-import { PlayStoreSvg } from "../images/playStore";
+import { Logo } from "../../public/images/Logo";
+import { PlayStoreSvg } from "../../public/images/playStore";
 
 export default function Footer() {
   return (
-    <footer className="footer bg-white text-base-content p-10 font-sans h-96 px-24 xl:px-32 2xl:px-40 text-center w-full  relative">
+    <footer className="footer bg-white text-base-content p-10 font-sans h-96 sm:px-24 xl:px-32 2xl:px-40 text-center w-full  relative">
       <nav className="">
         <Logo width="50" height="50" />
       </nav>

@@ -14,7 +14,7 @@ export default function PersonalComp({
       <AsyncImage
         src={`https://xsgames.co/randomusers/avatar.php?g=${gender}`}
         style={{ width: 285, height: 400 }}
-        loader={<div className="bg-slate-400 rounded-3xl"></div>}
+        loader={<div className="skeleton"></div>}
         error={<div style={{ background: "#eee" }} />}
         loading="lazy"
       />

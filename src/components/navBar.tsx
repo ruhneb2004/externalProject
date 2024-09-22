@@ -1,7 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { Logo } from "../images/Logo";
-import { SearchIcon } from "../images/searchIcon";
-// import { SearchIcon } from "../svgs/searchIcon";
+import { Logo } from "../../public/images/Logo";
+import { SearchIcon } from "../../public/images/searchIcon";
 import Button from "./buttonComponent";
 
 export default function NavBar() {
@@ -13,8 +12,8 @@ export default function NavBar() {
   return (
     <div className="flex border-b justify-between px-6 h-16 w-full">
       {/* left div */}
-      <div className="flex items-center font-graphik text-sm text-mainDark gap-10 ">
-        <div>
+      <div className="flex items-center font-graphik text-sm text-mainDark gap-10 relative">
+        <div className="relative">
           <Logo width="50" height="28" />
         </div>
         <div className=" gap-7 hidden lg:flex">
@@ -39,7 +38,7 @@ export default function NavBar() {
         ) : (
           <div className="flex gap-2">
             <div className="relative hidden sm:block">
-              <div>
+              <div className="absolute top-2 left-2">
                 <SearchIcon width="20" height="20" />
               </div>
 
