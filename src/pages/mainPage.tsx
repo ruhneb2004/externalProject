@@ -21,7 +21,6 @@ export default function MainPage() {
     axios
       .get("https://gorest.co.in/public/v2/users")
       .then((res) => {
-        console.log(res.data);
         setPersonData(res.data);
       })
       .catch((err) => console.log(err));

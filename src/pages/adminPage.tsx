@@ -25,7 +25,6 @@ export default function AdminPage() {
           `https://gorest.co.in/public/v2/users?page=${pageNumber}&per_page=10`
         )
         .then((res) => {
-          console.log(res.data);
           setPersonData((personData) => [...(personData ?? []), ...res.data]);
           const data = res.data;
 
@@ -81,12 +80,6 @@ export default function AdminPage() {
     setAvailableMaleCount(availabileMaleCountCurrent || 0);
     setAvailableFemaleCount(availabileFemaleCountCurrent || 0);
   }, [personData]);
-  console.log(
-    "male count av is ",
-    availabileMaleCount,
-    " female count av is ",
-    availabileFemaleCount
-  );
 
   return (
     <div className="px-10 md:px-20 lg:px-40 pt-16 pb-16">

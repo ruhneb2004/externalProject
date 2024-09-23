@@ -38,7 +38,7 @@ export default function ModalUpdatingUser({
   }, [alertFlag]);
 
   useEffect(() => {
-    setName(currentName || "hhh");
+    setName(currentName || "");
     setEmail(currentEmail || "");
     setGender(currentGender || "");
     setStatus(currentStatus || "");
@@ -128,7 +128,6 @@ export default function ModalUpdatingUser({
                   }`}
                   placeholder="email"
                   onChange={(e) => {
-                    console.log(validEmail);
                     const inputValue = e.target.value;
                     setEmail(inputValue);
 
@@ -137,7 +136,6 @@ export default function ModalUpdatingUser({
 
                     if (emailCheckRegex.test(inputValue) || inputValue === "") {
                       setvalidEmail(true);
-                      console.log("hi");
                     } else {
                       setvalidEmail(false);
                     }
@@ -238,13 +236,7 @@ export default function ModalUpdatingUser({
                         },
                       }
                     )
-                    .then((res) => {
-                      console.log(res.data);
-                      // const modal =
-                      //   document.getElementById("modal_update_user");
-                      // if (modal) {
-                      //   (modal as HTMLDialogElement).close();
-                      // }
+                    .then(() => {
                       setSuccessFlag(true);
                       setAlertFlag(true);
                     })
@@ -254,7 +246,6 @@ export default function ModalUpdatingUser({
                       );
                       setAlertFlag(true);
                       setSuccessFlag(false);
-                      console.log(err);
                     });
                 } catch (err) {
                   console.log(err);

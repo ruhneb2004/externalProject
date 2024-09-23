@@ -13,7 +13,7 @@ export default function ModalChart({
   availabileFemaleCount: number;
 }) {
   const [currentModal, setCurrentModal] = useState("gender");
-  console.log(availabileMaleCount, " ", availabileFemaleCount);
+
   return (
     <dialog id="graph_modal" className="modal">
       <div className="modal-box max-w-none w-full xs:w-[490px] sm:w-[600px] md:w-[650px] lg:w-[700px]  xl:w-[800px] min-w-[412px]">

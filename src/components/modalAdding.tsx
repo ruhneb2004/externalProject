@@ -107,7 +107,6 @@ export default function ModalAddingMember() {
                   }`}
                   placeholder="email"
                   onChange={(e) => {
-                    console.log(validEmail);
                     const inputValue = e.target.value;
                     setEmail(inputValue);
 
@@ -116,7 +115,6 @@ export default function ModalAddingMember() {
 
                     if (emailCheckRegex.test(inputValue) || inputValue === "") {
                       setvalidEmail(true);
-                      console.log("hi");
                     } else {
                       setvalidEmail(false);
                     }
@@ -216,14 +214,7 @@ export default function ModalAddingMember() {
                         },
                       }
                     )
-                    .then((res) => {
-                      console.log(res.data);
-                      // const modal = document.getElementById(
-                      //   "graph_adding_member"
-                      // );
-                      // if (modal) {
-                      //   (modal as HTMLDialogElement).close();
-                      // }
+                    .then(() => {
                       setAlertFlag(true);
                       setSuccessFlag(true);
                     })
